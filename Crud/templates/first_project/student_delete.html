@@ -1,0 +1,9 @@
+{% extends 'first_project/base.html' %}
+
+{% block body_block %}
+
+<h1>Student Delete</h1>
+
+<div class="alert alert-danger">{{ delete_message }}</div>
+<a href="{% url 'first_app:index' %}" class="btn btn-primary">Return home</a>
+{% endblock %}

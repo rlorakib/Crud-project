@@ -1,0 +1,39 @@
+{% extends 'first_project/base.html' %}
+
+
+{% block body_block %}
+
+<h1>Student List</h1>
+
+{% if student_list %}
+
+  <table border='1'>
+    <tr>
+        <th>Full Name</th>
+        <th>Roll No</th>
+        <th>Department</th></colgroup>
+    </tr>
+
+    {% for x in student_list %}
+    
+    <tr>
+        <td><a href="{% url 'first_app:student_info' student_id=x.id %}">{{ x.first_name }}{{ x.last_name}}</td></a> 
+
+        <td>{{ x.roll }}</td>
+        <td>{{ x.department }}</td>
+
+        
+    </tr>
+    {% endfor %}
+
+ </table>
+
+<br>
+ <a href="{% url 'first_app:students' %}" type="button" class="btn btn-primary" >Add Student</a>
+
+   {% else %}
+
+   <h3>No Student</h3>
+
+{% endif %}
+{% endblock %}

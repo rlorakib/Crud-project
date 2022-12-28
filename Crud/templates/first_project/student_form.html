@@ -1,0 +1,18 @@
+{% extends 'first_project/base.html' %}
+
+
+{% block body_block %}
+
+<h1>Student Form</h1>
+
+<form action="" method="post">
+
+    {{ student_form.as_p }}
+
+    {% csrf_token %}
+
+    <input type="submit" class="btn btn-primary" name="submit" value="Submit Form">
+    <a href="{% url 'first_app:index'%}" type="button" class="btn btn-primary">Return home</a>
+</form>
+
+{% endblock %}
