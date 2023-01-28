@@ -9,7 +9,7 @@ class student(models.Model):
     email = models.EmailField(max_length=35)
     department = models.CharField(max_length=50)
     roll = models.IntegerField()
-    registration = models.CharField(max_length=33)
+    registration = models.IntegerField()
   
 
 
